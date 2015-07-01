@@ -1,5 +1,6 @@
 <?xml vesrion="1.0" encoting="utf-8">
 	<MasterPage>
+		<!-- I am the master of the GIT!!!! -->
 		<Name LocalizedName="My First Master Page" OriginalName = "My First Master Page"/>
 		<Language>1111</Language> <!-- Do we need it for Master Pages??? -->
 		<PortalID>100</PortalID> <!-- Do we need it to be here? -->
