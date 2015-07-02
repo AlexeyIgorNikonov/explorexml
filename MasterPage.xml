@@ -1,0 +1,95 @@
+<?xml vesrion="1.0" encoting="utf-8">
+	<MasterPage>
+		<!-- I am the master of the GIT222!!!! -->
+		<Name LocalizedName="My First Master Page" OriginalName = "My First Master Page"/>
+		<Language>1111</Language> <!-- Do we need it for Master Pages??? -->
+		<PortalID>100</PortalID> <!-- Do we need it to be here? -->
+		<!--At the moment only 3 sections: header, bodyStart, bodyEnd -->
+		<!--ToDo: what to add? -->
+		<Header>
+		<!--Header contains:
+		 1. Portal Admin can define non-file references to appear within the end of the HTML <head>
+		 2. Metatdata content will render first followed by Portal Files (from REQ 5) at the end of the HTML <head>
+		 3. Portal Admin can add references to files uploaded to the Portal CDN
+		 4. Portal Admin can add references to files hosted outside of the Portal CDN
+		 5. No Widgets?
+		So: Metadata -> everything else -> non-file references ta the end?
+		 -->
+			<section Type = "Metadata" position = "1"> <!-- at the start-->
+			<Category>HTML</Category>
+			<Name>Metadata</Name>
+			<LocalizedName>Metadata</LocalizedName>
+			<RequiredLevel>none</RequiredLevel> 
+			<Contents></Contents> <!-- for now let's assume that metadata is some long line of text-->
+			</section>
+			
+			<section  Type = "File References" position = "2"> <!-- in the middle -->
+			<Category>File References</Category>
+			<Name>File References</Name>
+			<LocalizedName>File References</LocalizedName>
+			<RequiredLevel>none</RequiredLevel> 
+			<sections position="1">
+				<Contents>/some/reference/1</Contents> 
+			</sections>
+			<sections position="2">
+				<Contents>/some/reference/2</Contents>
+			</sections>
+			</section>
+			
+			<section Type = "Non-File References" position = "3"> <!-- at the start-->
+			<Category>Non-File References</Category>
+			<Name>Non-File References</Name>
+			<LocalizedName>Non-File References</LocalizedName>
+			<RequiredLevel>none</RequiredLevel> 
+			<sections position="1">
+				<Contents>/some/reference/3</Contents> 
+			</sections>
+			<sections position="2">
+				<Contents>/some/reference/4</Contents>
+			</sections>
+		</Header>
+		<!-- Body start can contain only Widgets, each Widget can have ViewOrder. Can be empty. -->
+		<!--ToDo: integrate this with Widget structure -->
+		<BodyStart>
+		<section Type = "Widget" position="1">
+			<Category>Navigation</Category>
+			<Name>Main Nav</Name>
+			<LocalizedName>Main Nav</LocalizedName>
+			<RequiredLevel>none</RequiredLevel>
+			<sections position="1">
+				<label>
+					<description>Home</description>
+				</label
+				<source>/Home.html</source>
+			</sections>
+			<sections position="2">
+				<label>
+					<description>Submit a Case</description>
+				</label
+				<source>/Case.html</source>
+			</sections>
+		</section>
+		<section Type = "Widget" position="2">
+			<Category>Some Category</Category> <!--What Categories are supported? -->
+			<Name>Some Widget</Name>
+			<LocalizedName>Some Widget</LocalizedName>
+			<RequiredLevel>none</RequiredLevel>
+			<sections position="1">
+				<label>
+					<description>Home</description>
+				</label
+				<source>/Home.html</source>
+			</sections>
+			<sections position="2">
+				<label>
+					<description>Submit a Case</description>
+				</label
+				<source>/Case.html</source>
+			</sections>
+		</section>
+		</BodyStart>
+		
+		<!--Same structure as BodyStart. Can contain only Widgets in some order. Can be empty. -->
+		<BodyEnd/>
+	</MasterPage>
+</xml>
